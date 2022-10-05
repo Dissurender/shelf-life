@@ -9,7 +9,7 @@ module.exports = {
                 userId: req.user.id,
                 completed: false,
             });
-            res.render('Books.ejs', {
+            res.render('books.ejs', {
                 Books: BookItems,
                 left: itemsLeft,
                 user: req.user,
@@ -26,7 +26,7 @@ module.exports = {
                 userId: req.user.id,
             });
             console.log(`${req.title} has been added!`);
-            res.redirect('/Books');
+            res.redirect('/books');
         } catch (err) {
             console.log(err);
         }

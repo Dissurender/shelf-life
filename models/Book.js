@@ -1,18 +1,29 @@
 const mongoose = require('mongoose');
 
-const TodoSchema = new mongoose.Schema({
-    todo: {
+const BookSchema = new mongoose.Schema({
+    title: {
         type: String,
         required: true,
     },
-    completed: {
-        type: Boolean,
-        required: true,
-    },
-    userId: {
+    author: {
         type: String,
         required: true,
+    },
+    rating: {
+        type: Number,
+        required: true,
+    },
+    pages: {
+        type: Number,
+        required: true,
+    },
+    desc: {
+        type: String,
+        required: true,
+    },
+    tag: {
+        type: String,
     },
 });
 
-module.exports = mongoose.model('Book', TodoSchema);
+module.exports = mongoose.model('Book', BookSchema);
