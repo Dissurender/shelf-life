@@ -9,11 +9,11 @@ const BookSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    rating: {
+    pages: {
         type: Number,
         required: true,
     },
-    pages: {
+    rating: {
         type: Number,
         required: true,
     },

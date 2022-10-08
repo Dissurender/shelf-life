@@ -1,31 +1,54 @@
 <%- include('partials/header') -%>
-  <div class="container">
+  <div class="container min-h-screen mx-auto">
 
-    <div class="mt-5 bg-black">
-      <h2>Add a book</h2>
-      <form action="/book/createBook" enctype="multipart/form-data" method="POST">
-        <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" name="title">
+    <% if (!!user) { %>
+    <div class="collapse">
+      <input type="checkbox" class="w-96 my-4"/>
+      <button class="btn btn-primary text-lg font-medium collapse-title my-4 w-96">Click to add a book</button>
+
+      <div class="collapse-content w-1/2 z-10"> 
+        
+        <div class="bg-base-100 p-4">
+          <form action="/book/createBook" enctype="multipart/form-data" method="POST">
+            
+            <div class="m-4">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title">
+            </div>
+            <div class="m-4">
+              <label for="author" class="form-label">Author</label>
+              <input type="text" class="form-control" id="author" name="author">
+            </div>
+            <div class="rating gap-1 m-4">
+              <input type="radio" name="rating" value="1" class="mask mask-heart bg-accent" />
+              <input type="radio" name="rating" value="2" class="mask mask-heart bg-accent" checked />
+              <input type="radio" name="rating" value="3" class="mask mask-heart bg-accent" />
+              <input type="radio" name="rating" value="4" class="mask mask-heart bg-accent" />
+              <input type="radio" name="rating" value="5" class="mask mask-heart bg-accent" />
+            </div>
+
+            <div class="m-2">
+              <label for="caption" class="form-label mb-2">Summary</label>
+              <textarea class="form-control textarea textarea-bordered rounded-none resize-none" id="caption" name="caption"></textarea>
+            </div>
+            <div class="m-4">
+              <label for="imgUpload" class="form-label">Image</label>
+              <input type="file" class="form-control" id="imageUpload" name="file">
+            </div>
+            <button type="submit" class="btn btn-primary btn-active ml-4 mb-4" value="Upload">Submit</button>
+          </form>
         </div>
-        <div class="mb-3">
-          <label for="caption" class="form-label">Caption</label>
-          <textarea class="form-control" id="caption" name="caption"></textarea>
-        </div>
-        <div class="mb-3">
-          <label for="imgUpload" class="form-label">Image</label>
-          <input type="file" class="form-control" id="imageUpload" name="file">
-        </div>
-        <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-      </form>
+
+      </div>
     </div>
+    <% } %>
 
     <div class="row justify-content-center mt-5">
       <ul class="row list-unstyled">
-        <% for(var i=0; i<books.length; i++) {%>
+        <% for(let i = 0; i < posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
-            <a href="/book/<%= books[i]._id%>">
-              <img class="img-fluid" src="<%= books[i].image%>">
+            <a href="/book/<%= posts[i]._id%>">
+              <img class="img-fluid" src="<%= posts[i].image%>">
             </a>
           </li>
         <% } %>

@@ -5,13 +5,8 @@ module.exports = {
         console.log(req.user);
         try {
             const BookItems = await Book.find({ userId: req.user.id });
-            const itemsLeft = await Book.countDocuments({
-                userId: req.user.id,
-                completed: false,
-            });
             res.render('books.ejs', {
                 Books: BookItems,
-                left: itemsLeft,
                 user: req.user,
             });
         } catch (err) {
@@ -22,11 +17,10 @@ module.exports = {
         try {
             await Book.create({
                 Book: req.body.BookItem,
-                completed: false,
                 userId: req.user.id,
             });
             console.log(`${req.title} has been added!`);
-            res.redirect('/books');
+            res.redirect('/feed');
         } catch (err) {
             console.log(err);
         }
@@ -34,7 +28,7 @@ module.exports = {
     updateBook: async (req, res) => {
         try {
             await Book.findOneAndUpdate(
-                { _id: req.body.BookIdFromJSFile },
+                { _id: req.params.id },
                 {
                     completed: false,
                 }
@@ -46,10 +40,10 @@ module.exports = {
         }
     },
     deleteBook: async (req, res) => {
-        console.log(req.body.BookIdFromJSFile);
+        console.log(req.params.id);
         try {
             await Book.findOneAndDelete({ _id: req.body.BookIdFromJSFile });
-            console.log(`${req.title} has been removed.`);
+            console.log(`${req.params.id} has been removed.`);
             res.json('Deleted It');
         } catch (err) {
             console.log(err);

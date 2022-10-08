@@ -8,6 +8,7 @@ exports.getLogin = (req, res) => {
     }
     res.render('login', {
         title: 'Login',
+        nav: false
     });
 };
 
@@ -39,13 +40,15 @@ exports.postLogin = (req, res, next) => {
                 return next(err);
             }
             req.flash('success', { msg: 'Success! You are logged in.' });
-            res.redirect(req.session.returnTo || '/profile');
+            res.redirect(req.session.returnTo || '/feed');
         });
     })(req, res, next);
 };
 
 exports.logout = (req, res) => {
-    req.logout();
+    req.logout(() => {
+        console.log('User has logged out.');
+    });
     req.session.destroy((err) => {
         if (err)
             console.log(
@@ -63,6 +66,7 @@ exports.getSignup = (req, res) => {
     }
     res.render('signup', {
         title: 'Create Account',
+        nav: false,
     });
 };
 

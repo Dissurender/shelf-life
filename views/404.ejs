@@ -1,0 +1,24 @@
+<%- include('partials/header') -%>
+<div
+    class="container min-h-screen flex flex-col items-center justify-center px-5 mx-auto"
+>
+    <div class="max-w-md text-center">
+        <h2 class="mb-8 font-bold text-9xl">
+            <span class="text-slate-900">Error</span>
+            <span class="text-secondary-focus">404</span>
+        </h2>
+        <p class="text-3xl font-semibold md:text-3xl text-slate-900">
+            Sorry, this page doesn't exist.
+        </p>
+        <p class="mt-4 mb-8 text-lg text-slate-900">
+            But dont worry, you can go back to your feed.
+        </p>
+        <a
+            rel="noopener noreferrer"
+            href="/feed"
+            class="btn btn-secondary-focus"
+            >Back to feed</a
+        >
+    </div>
+</div>
+<%- include('partials/footer') -%>

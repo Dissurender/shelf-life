@@ -13,7 +13,9 @@ const path = require('path');
 const connectDB = require('./config/database.js');
 
 const mainRoutes = require('./routes/main');
-const postRoutes = require('./routes/posts');
+const feedRoutes = require('./routes/feed');
+const bookRoutes = require('./routes/books');
+const errorRoutes = require('./routes/errors');
 
 require('dotenv').config({ path: './config/.env' });
 require('./config/passport')(passport);
@@ -46,11 +48,15 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+
 //Use flash messages for errors, info, ect...
 app.use(flash());
 
 app.use('/', mainRoutes);
-app.use('/post', postRoutes);
+app.use('/feed', feedRoutes);
+app.use('/book', bookRoutes);
+app.use('/:error', errorRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {

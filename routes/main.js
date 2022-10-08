@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const authController = require('../controllers/auth');
 const homeController = require('../controllers/home');
-const postController = require('../controllers/posts');
+const postController = require('../controllers/feed');
 const { ensureAuth } = require('../middleware/auth');
 
 router.get('/', homeController.getIndex);

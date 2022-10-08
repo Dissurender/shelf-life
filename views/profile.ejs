@@ -1,34 +1,37 @@
 <%- include('partials/header') -%>
-    <div class="min-h-screen text-secondary-content">
 
-      <div class="flex flex-col w-full lg:flex-row">
-        <div class="grid flex-grow h-32 card bg-inherit place-items-center">
+<div class="min-h-screen text-secondary-content">
 
-            <p><strong>User Name</strong>: <%= user.userName %></p>
-            <p><strong>Email</strong>: <%= user.email %></p>
-            <a href="/logout" class="col-3 btn btn-primary">Logout</a>
-
-        </div> 
-
-        <div class="grid flex-grow h-32 card bg-inherit place-items-center">
-
-          <h2>My Books</h2>
-          <ul class="list-unstyled">
-            <% for(var i=0; i<books.length; i++) {%>
-              <li class="justify-content-between m-4">
-                <a href="/book/<%= books[i]._id%>">
-                  <img class="img-fluid" src="<%= books[i].image%>">
-                </a>
-              </li>
-            <% } %>
-          </ul>
-
-        </div>
-      </div>
-
-      <div class="">
-        <a class="btn btn-primary" href="/feed">Return to Feed</a>
-      </div>
-          
+  <div class="w-full h-48 bg-inherit">
+    <div class="w-1/2 mx-auto text-center p-4">
+      <p><strong>User Name</strong>: <%= user.userName %></p>
+      <p><strong>Email</strong>: <%= user.email %></p>
     </div>
+    <div class="w-1/3 mx-auto">
+      <!-- TODO - Convert to button -->
+      <a href="/logout" class="btn btn-error mt-4">Logout</a>
+    </div>
+  </div>
+
+    <div class="w-full my-16 border-t-2 border-neutral">
+      <div class="grid flex-grow bg-inherit place-items-center">
+
+        <h2 class=" my-4 text-lg font-bold">My Books</h2>
+        <ul class="list-unstyled">
+          <% for(var i=0; i<books.length; i++) {%>
+            <li class="justify-content-between m-4">
+              <a href="/book/<%= books[i]._id%>">
+                <img class="img-fluid" src="<%= books[i].image%>">
+              </a>
+            </li>
+          <% } %>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="flex justify-center">
+    <a class="btn btn-primary" href="/feed">Return to Feed</a>
+  </div>
   <%- include('partials/footer') -%>

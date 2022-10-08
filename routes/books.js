@@ -7,8 +7,8 @@ router.get('/', ensureAuth, booksController.getBooks);
 
 router.post('/createBook', booksController.createBook);
 
-router.put('/updateBook', booksController.updateBook);
+router.put('/updateBook/:id', booksController.updateBook);
 
-router.delete('/deleteBook', booksController.deleteBook);
+router.delete('/deleteBook/:id', booksController.deleteBook);
 
 module.exports = router;
