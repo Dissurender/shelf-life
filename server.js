@@ -48,8 +48,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-
 //Use flash messages for errors, info, ect...
 app.use(flash());
 

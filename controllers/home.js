@@ -1,5 +1,5 @@
 module.exports = {
     getIndex: (req, res) => {
-        res.render('welcome.ejs', {nav: false});
+        res.render('welcome.ejs', { nav: false });
     },
 };

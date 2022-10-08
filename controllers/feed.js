@@ -3,12 +3,15 @@ const Book = require('../models/Book');
 const Post = require('../models/Post');
 const Comment = require('../models/Comment');
 
-
 module.exports = {
     getProfile: async (req, res) => {
         try {
             const books = await Book.find({ user: req.user.id });
-            res.render('profile.ejs', { books: books, user: req.user, nav: true });
+            res.render('profile.ejs', {
+                books: books,
+                user: req.user,
+                nav: true,
+            });
         } catch (err) {
             console.log(err);
         }

@@ -5,9 +5,9 @@ const feedController = require('../controllers/feed');
 const { ensureAuth, ensureGuest } = require('../middleware/auth');
 
 //Post Routes - simplified for now
-router.get('/', ensureAuth, feedController.getFeed)
+router.get('/', ensureAuth, feedController.getFeed);
 
-router.get('/guest', ensureGuest, feedController.getGuestFeed)
+router.get('/guest', ensureGuest, feedController.getGuestFeed);
 
 router.get('/:id', ensureAuth, feedController.getPost);
 
