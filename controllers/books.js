@@ -1,5 +1,10 @@
 const Book = require('../models/Book');
 
+/*
+ * endpoint controll for user favorites
+ * array in DB
+ */
+
 module.exports = {
     getBooks: async (req, res) => {
         console.log(req.user);

@@ -21,7 +21,7 @@ const BookSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    tag: {
+    tags: {
         type: String,
     },
 });
