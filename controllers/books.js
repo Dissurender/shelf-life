@@ -14,15 +14,21 @@ module.exports = {
         }
     },
     createBook: async (req, res) => {
+        const book = req.body;
         try {
             await Book.create({
-                Book: req.body.BookItem,
-                userId: req.user.id,
+                title: book.title,
+                author: book.author,
+                pages: book.pages,
+                rating: book.rating,
+                desc: book.desc,
+                tags: book.tags,
             });
             console.log(`${req.title} has been added!`);
             res.redirect('/feed');
         } catch (err) {
             console.log(err);
+            res.redirect('/feed')
         }
     },
     updateBook: async (req, res) => {
