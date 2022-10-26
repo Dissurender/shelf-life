@@ -38,7 +38,7 @@ app.use(methodOverride('_method'));
 // Setup Sessions - stored in MongoDB
 app.use(
   session({
-    secret: 'Save the cheerleader, Save the world',
+    secret: process.env.PHRASE,
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
