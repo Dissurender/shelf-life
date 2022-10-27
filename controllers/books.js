@@ -28,7 +28,7 @@ module.exports = {
       res.redirect('/feed');
     } catch (err) {
       console.log(err);
-      res.redirect('/feed');
+      res.redirect('/profile');
     }
   },
   updateBook: async (req, res) => {
