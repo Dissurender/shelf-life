@@ -7,6 +7,7 @@ router.get('/:user', ensureAuth, booksController.getBooks);
 
 router.post('/addBook', booksController.createBook);
 
+// may be depriciated due to scope
 router.put('/updateBook/:id', booksController.updateBook);
 
 router.delete('/deleteBook/:id', booksController.deleteBook);

@@ -1,17 +1,15 @@
-
 <p align="center">
 <img src="https://img.shields.io/github/issues/dissurender/shelf-life-backend"> <img src="https://img.shields.io/github/license/dissurender/shelf-life-backend"> <img src="https://img.shields.io/github/languages/top/dissurender/shelf-life-backend">
 </p>
 
 # Shelf Life
 
----
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+ShelfLife looks to create a space for friends to gather and discuss books that they have read or are currently reading:
 
-- What was your motivation?
+- 
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
 - What problem does it solve?
 - What did you learn?
@@ -31,11 +29,12 @@ Provide a short description explaining the what, why, and how of your project. U
 ## Installation
 
 Standard Node install behavior
+
 * `npm install`
 
 ## Usage
 
-To run locally use `npm run dev` in your terminal
+To run locally use `npm run dev` in your terminal, `npm build` to deploy as service
 
 ### Things to add
 
@@ -46,12 +45,6 @@ To run locally use `npm run dev` in your terminal
   - CLOUD_NAME = `cloudinary cloud name`
   - API_KEY = `cloudinary api key`
   - API_SECRET = `cloudinary api secret`
-
-<!-- create an `assets/images` folder in your repository and upload your screenshot to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ``` -->
 
 ## How to Contribute
 
