@@ -44,6 +44,7 @@ module.exports = {
         comments: comments,
       });
     } catch (err) {
+      res.render('404.ejs', { nav: false });
       console.log(err);
     }
   },
