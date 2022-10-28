@@ -4,15 +4,13 @@
 
 # Shelf Life
 
-
 ## Description
 
 ShelfLife looks to create a space for friends to gather and discuss books that they have read or are currently reading:
 
-- 
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+- I built this project to have a place to host read-alongs
+- Using ShelfLife, discussions are created with page position spoilers
+- Learned concepts: Nested DB objects, state filtering
 
 <!-- ## Table of Contents
 
@@ -24,7 +22,7 @@ ShelfLife looks to create a space for friends to gather and discuss books that t
 
 * Timeline style posting board
 * Personal favorites list
-* Ability to react to others' reviews
+* Ability to react to others' comments
 
 ## Installation
 
