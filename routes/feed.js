@@ -4,11 +4,12 @@ const upload = require('../middleware/multer');
 const feedController = require('../controllers/feed');
 const { ensureAuth, ensureGuest } = require('../middleware/auth');
 
-//Post Routes - simplified for now
 router.get('/', ensureAuth, feedController.getFeed);
 
+// anon access to feed
 router.get('/guest', ensureGuest, feedController.getGuestFeed);
 
+// direct entry point to single
 router.get('/:id', ensureAuth, feedController.getPost);
 
 router.post('/createPost', upload.single('file'), feedController.createPost);
