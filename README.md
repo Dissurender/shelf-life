@@ -1,6 +1,5 @@
-<p align="center">
-<img src="https://img.shields.io/github/issues/dissurender/shelf-life-backend"> <img src="https://img.shields.io/github/license/dissurender/shelf-life-backend"> <img src="https://img.shields.io/github/languages/top/dissurender/shelf-life-backend">
-</p>
+[![](https://img.shields.io/github/issues/dissurender/shelf-life)](https://github.com/Dissurender/shelf-life/issues) [![](https://img.shields.io/github/license/dissurender/shelf-life)](https://github.com/Dissurender/shelf-life/blob/main/LICENSE) ![](https://img.shields.io/github/languages/top/dissurender/shelf-life)
+
 
 # Shelf Life
 
