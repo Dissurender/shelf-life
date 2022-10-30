@@ -4,18 +4,17 @@
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost btn-circle">
         <div class="avatar">
-          <div class="w-12 rounded-full">
+          <div class="w-12 h-12 rounded-full">
             <img src="https://i.pravatar.cc/48?u=<%- user.usuerName %>" />
           </div>
         </div>
-
       </label>
       <ul
         tabindex="0"
-        class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+        class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-64 font-semibold"
       >
-        <li><a href="/feed">Home</a></li>
-        <li><a href="/profile">Profile</a></li>
+        <li class="m-1"><a href="/feed">Home</a></li>
+        <li class="m-1"><a href="/profile"><%= user.userName %></a></li>
       </ul>
     </div>
     <% } %>
