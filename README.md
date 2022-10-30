@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://img.shields.io/github/issues/dissurender/shelf-life-backend"> <img src="https://img.shields.io/github/license/dissurender/shelf-life-backend"> <img src="https://img.shields.io/github/languages/top/dissurender/shelf-life-backend">
+<img src="https://img.shields.io/github/issues/dissurender/shelf-life"> <img src="https://img.shields.io/github/license/dissurender/shelf-life"> <img src="https://img.shields.io/github/languages/top/dissurender/shelf-life">
 </p>
 
 # Shelf Life
